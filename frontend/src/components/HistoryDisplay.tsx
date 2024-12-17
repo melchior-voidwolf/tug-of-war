@@ -21,7 +21,7 @@ const HistoryDisplay: React.FC<HistoryDisplayProps> = ({ username }) => {
         {history.length > 0 ? (
           history.map((item, index) => (
             <li key={index} className="border-b py-2">
-              {item.username} {item.won ? "赢了" : "输了"} | 差距: {item.scoreDiff}
+            {item.team === 'left' ? "左队" : "右队"}  {item.username} {item.won ? "赢了" : "输了"} | 差距: {item.scoreDiff}
             </li>
           ))
         ) : (

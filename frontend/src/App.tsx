@@ -15,7 +15,12 @@ const App: React.FC = () => {
         <>
           <GameScreen username={username} team={team} />
           <button
-            onClick={() => setShowHistory(true)}
+            onClick={() => {
+              setShowHistory(false)
+              setTimeout(() => {
+                setShowHistory(true)
+              }, 100);
+            }}
             className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
             查看历史成绩
